@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    margin: auto;
+    max-width: 1920px;
+    position: relative;
+}
+.header {
+    display: flex;
+    height: 8rem;
+    padding: 0 2rem;
+    background-color: grey;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.header .menu{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.header .menu ul{
+    display: flex;
+    margin: 1rem;
+    list-style-type: none;  
+}
+
+.header .menu ul li{
+    padding: 0 8px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.menu a:hover{
+    color: white;
+}
+
+.header .logo img{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.slideContainer {
+    position: relative;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin-bottom: 1rem;
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+}
+
+.slide{
+    display: none;
+}
+
+.arrows{
+    position: absolute;
+    cursor: pointer;
+    font-size: 3rem;
+    top: calc(50% - 32px);
+}
+
+.prev{
+    margin-left: .5rem;
+}
+.next{
+    right: 0;
+    margin-right: .5rem;
+}
+
+.slideNumber {
+    position: absolute;
+    background-color: white;
+    margin: 1rem 0 0 1rem;
+}
+
+.slideDescription {
+    position: absolute;
+    bottom: 0;
+    background-color: wheat;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cardContainer{
+    position: relative;
+    display: flex;
+    padding: 2rem 0 2rem 0;
+    overflow: hidden;
+}
+
+.card:not(:first-child){
+    margin-left: 1rem;
+}
+
+.card{
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid;
+    max-width: 400px;
+    max-height: 600px;
+    padding: 0 1rem 1rem;
+}
+
+.card img{
+    max-width: 400px;
+    max-height: 600px;
+}
+
+.productCardContainer{
+    position: relative;
+    overflow:hidden;
+    width:300px;
+}
+
+.card-context {
+    position: relative;
+    display:flex;
+    transition:left .2s linear;
+}
+
+.card-context img {
+    display:block;
+    width:300px;
+}
+
+.navbarItems{
+    list-style-type: none;
+    display: flex;
+}
+
+.navbarItems li{
+    border-radius: .375rem;
+}
+
+.navbarItems li:hover{
+    cursor: pointer;
+    background-color: white;
+}
+
+.navbarItems a{
+    float: left;
+    text-decoration: none;
+    color: black;
+    margin: 0.5rem;
+}
+
+.menuBranch{
+    background-color: white;
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    margin-top: 81px;
+    z-index: 1;
+    border: 2px solid;
+}
+
+.navbarItems:hover .menuBranch {
+    display: flex;
+}
