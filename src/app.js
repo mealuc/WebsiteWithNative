@@ -55,7 +55,7 @@ cardContainer.addEventListener("mouseleave", recSlideStop);
 
 //Product Cards
 const productCardContainer = document.querySelector(".productCardContainer"); // 300px
-const productCardContext = productCardContainer.querySelector('.card-context'); 
+const productCardContext = productCardContainer.querySelector('.card-context');
 const productCardImgs = productCardContainer.querySelectorAll("img"); // 3
 const productCardPerWidth = productCardContainer.clientWidth / productCardImgs.length; // 300 / 3
 
@@ -76,3 +76,129 @@ function productCardSlide(event) {
 }
 
 productCardContainer.addEventListener("mousemove", productCardSlide);
+
+//Search Autocomplete 
+
+const searchInput = document.querySelector(".searchInput");
+const resultBox = document.querySelector(".resultBox");
+
+async function getResult() {
+    const cities = await fetch('cities.json')
+        .then(response => response.json());
+    let valueArray = [];
+    for (let i in cities) {
+        valueArray.push(cities[i])
+    }
+    if (searchInput.value) {
+        const filteredData = valueArray.filter((city) => {
+            return city.toLocaleUpperCase('TR').includes(searchInput.value.toLocaleUpperCase('TR'))});
+        const resultData = filteredData.map(result => {
+            return `<li onclick="searchResult(this)">${result}</li>`;
+        })
+        if (filteredData.length && resultData.length) {
+            resultBox.style.borderTop = "1px solid";
+            resultBox.innerHTML = `<ul>${resultData.join('')}</ul>`;
+        }
+    }
+    else {
+        resultBox.style.borderTop = '';
+        resultBox.innerHTML = '';
+    }
+
+}
+
+function searchResult(data) {
+    searchInput.value = data.innerHTML;
+    resultBox.innerHTML = '';
+    resultBox.style.borderTop = '';
+}
+
+// Test
+/*
+ const datas = document.querySelectorAll("div");
+ for (const data of datas) {
+    console.log(data);
+
+    if (data.matches('.footerCategories')) {
+        console.log("girdi");
+    }
+    console.log("girmedi");
+
+ }*/
+ /*
+var değer = 1;
+console.log(değer);
+{
+    var değer = 5;
+    console.log(değer);
+}
+
+console.log(değer);
+
+let öteki = 1;
+console.log(öteki);
+{
+    let öteki = 5;
+    console.log(öteki);
+}
+
+console.log(öteki);
+*/
+/*
+var body = 50
+var water = 100;
+console.log(water)
+if(body < 49) {
+	var water = 1.4
+    console.log(water)
+}
+
+console.log(water)
+*/
+/*
+let age = 30
+let oldAge = age
+age = 31
+console.log("age:", age)
+console.log("OldAge:", oldAge)
+
+const me = {
+	name: "emre",
+	yas:  26
+}
+
+const friend = me;
+friend.yas = 25
+console.log(friend)
+console.log(me)
+*/
+/*
+var cars = {
+    models: ["BMW", "Mercedes", "Renault", "Peugeot", "Citröen"],
+    print: function (delay = 1000) {
+        setTimeout(() => {
+            console.log(this.models.join(","))
+        }, delay)
+    }
+}
+
+console.log(cars.print());
+*/
+/*
+var cities = {
+    ankara: "çankaya",
+    bursa: "inegöl",
+    izmir: "bornova",
+    istanbul: ["adalar", "beşiktaş", "beyoğlu", "maltepe", "üsküdar"]
+  }
+  
+  const {ankara,istanbul} = cities 
+
+  console.log(istanbul);
+  */
+ /*
+ var meyveler = ["kiraz","karpuz","vişne"];
+ var sebzeler = ["patates","marul","turp"];
+ var sepet = [...meyveler,...sebzeler];
+ console.log(sepet);
+ */
