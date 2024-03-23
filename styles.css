@@ -1,10 +1,11 @@
 body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1920px;
+    margin: auto;
 }
 .container{
     margin: auto;
-    max-width: 1920px;
 }
 .header {
     display: flex;
@@ -16,19 +17,18 @@ body{
     position: relative;
 }
 
-.header .menu{
+.menu{
     display: flex;
     justify-content: flex-end;
-    flex: 1;
 }
 
-.header .menu ul{
+.menu ul{
     display: flex;
     margin: 1rem;
     list-style-type: none;  
 }
 
-.header .menu ul li{
+.menu ul li{
     padding: 0 8px;
 }
 
@@ -79,8 +79,9 @@ body{
 }
 
 .slideNumber {
+    font-size: 2rem;
     position: absolute;
-    background-color: white;
+    background-color: transparent;
     margin: 1rem 0 0 1rem;
 }
 
@@ -164,7 +165,7 @@ body{
     height: 200px;
     top: 100%;
     z-index: 1;
-    border: 2px solid;
+    border: 0.5px solid;
 }
 
 .navbarItems li:hover .menuBranch {
@@ -172,26 +173,92 @@ body{
 }
 
 .searchContainer{
-    display: flex;
-    padding: 1rem;
+    background-color: white;
+    border: 1px solid;
     width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    z-index: 2;
+    margin-top: 45px;
+}
+
+.searchBox{
+    align-items: center;
+    display: flex;
+    height: 30%;
+    padding: 0px 8px;
 }
 
 .searchInput{
     width: 100%;
-    border-radius: 10px;
-    border: 1px solid;
-    padding: 8px;
+    border: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: transparent;
-    color: black;
+    font-size: 1rem;
 }
 
 .searchInput::placeholder{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
+    font-size: 1rem;
 }
 
 .searchInput:focus{
-    outline: none;
+    outline: 0;
+}
+
+button{
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+button .fa-solid{
+    width: 22px;
+    font-size: 18px;
+}
+
+.resultBox{
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.resultBox ul{
+    list-style: none;
+    padding: 0 4px;
+    margin: auto;
+}
+
+.resultBox ul li{
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.resultBox ul li:hover{
+    background: #e9f3ff;
+}
+
+.footer{
+    height: auto;
+    background-color: #f4f4f4;
+}
+
+.footerCategories ul{
+    list-style: none;
+}
+
+.footerCategories ul li{
+    padding-bottom: 8px;
+}
+
+.footerCopyright{
+    height: 3rem;
+    width: 100%;
+}
+
+.footerCopyright p{
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #6d6c70;
+    margin: 0;
 }
