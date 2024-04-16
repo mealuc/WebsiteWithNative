@@ -243,6 +243,13 @@ button .fa-solid{
     background-color: #f4f4f4;
 }
 
+.footerCategories{
+    display: grid;
+    width: 500px;
+    grid-template: 100% / 1fr 1fr;
+    grid-gap: 1rem;
+}
+
 .footerCategories ul{
     list-style: none;
 }
@@ -251,6 +258,13 @@ button .fa-solid{
     padding-bottom: 8px;
 }
 
+.footerCategories a {
+    cursor: pointer;
+}
+
+.footerCategories a:hover {
+    text-decoration: underline;
+}
 .footerCopyright{
     height: 3rem;
     width: 100%;
@@ -261,4 +275,77 @@ button .fa-solid{
     font-size: 1rem;
     background-color: #6d6c70;
     margin: 0;
+}
+
+/*
+    Contact Page CSS
+*/
+.registerContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.registerForm{
+    padding: 1rem;
+    width: 33%;
+    max-width: 400px;
+    margin: 1em;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    border: solid;
+}
+
+.registerForm input{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    border: 1px solid;
+}
+
+.registerForm input:focus{
+    outline: 0;
+}
+
+.registerForm input::placeholder{
+    font-size: 12px;
+}
+
+.registerForm input[type=submit]{
+    width: 50%;
+    cursor: pointer;
+    align-self: end;
+}
+
+/*
+    About Us Page
+*/
+
+.infoCardContainer{
+   display: flex;
+   max-width: 1640px;
+   margin: auto;
+   padding: 1rem;
+   gap: 1.5rem;
+}
+
+.infoCard{
+    min-height: 20vh;
+    padding: 1rem;
+    width: 368px;
+    border-radius: 1rem;
+    border: 1px solid;   
+    cursor: pointer;
+}
+
+.infoCard h2, p{
+    display: flex;
+}
+
+.infoCardImage img{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
 }
