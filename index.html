@@ -32,7 +32,7 @@
 
                 <div class="searchContainer">
                     <div class="searchBox">
-                        <input class="searchInput" onkeyup="getResult()"" type=" text" id="search-input"
+                        <input class="searchInput" onkeyup="actions.getResult()" type=" text" id="search-input"
                             autocomplete="off" placeholder="Bir şey yazınız">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
@@ -51,8 +51,8 @@
 
             </header>
             <div class="slideContainer">
-                <a class="arrows prev" onclick="changeSlides(-1)">&#10094;</a>
-                <a class="arrows next" onclick="changeSlides(1)">&#10095;</a>
+                <a class="arrows prev" onclick="actions.changeSlides(-1)">&#10094;</a>
+                <a class="arrows next" onclick="actions.changeSlides(1)">&#10095;</a>
 
                 <div class="slide">
                     <div class="slideNumber">1/3</div>
