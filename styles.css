@@ -359,7 +359,7 @@ button .fa-solid{
     opacity: 0;
     transition: 0.3s linear;
     visibility: hidden;
-    margin: -1rem;
+    margin:  0px -1rem -1rem -1rem;
     font-size: 1.2rem;
     display: flex;
     font-weight: bold;
