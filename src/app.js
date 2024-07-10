@@ -18,7 +18,7 @@ function changeSlides(index) {
     slides[slideIndex].style.display = "block";
 }
 
-//Recommandation Slide
+//Recommendation Slide
 
 let mouseHoldDown = false
 let mouseStartPos;
